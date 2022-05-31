@@ -1,0 +1,80 @@
+composer create-project --prefer-dist laravel/laravel nomProjet
+
+------------------------------------------------------------------------
+Auth
+composer require laravel/breeze --dev
+php artisan breeze:install 
+npm install
+npm run dev
+
+------------------------------------------------------------------------
+NODE JS
+npm run dev
+npm install --
+------------------------------------------------------------------------
+
+Laravel Ant
+composer require laravel/ui
+php artisan ui:auth
+php artisan ui bootstrap --auth
+php artisan ui vue --auth
+php artisan ui react --auth
+php artisan make:auth 
+php artisan ui:auth --views
+
+------------------------------------------------------------------------
+Flash
+composer require laracasts/flash
+
+------------------------------------------------------------------------
+Model -m for migration
+php artisan make:model nomModele -m
+
+------------------------------------------------------------------------
+Migrations
+php artisan make:migration create_nomTable_table
+
+------------------------------------------------------------------------
+Sedeer
+php artisan make:seeder NomTableSedeer 
+php artisan db:seed
+
+------------------------------------------------------------------------
+Controllers
+php artisan make:Controller nomController -r
+php artisan make:Controller Api/nomController -r
+
+------------------------------------------------------------------------
+Migrations
+php artisan migrate
+php artisan migrate:refresh
+
+------------------------------------------------------------------------
+
+Middleware
+auth -> Connecte
+guest -> non connecte
+
+------------------------------------------------------------------------
+Gates Roles
+php artisan make:migration add_admin_column_to_users_table --table=users
+
+ServiceProvider:
+	Gate::define('access-admin', function (User $user) {
+            return $user->admin;
+
+------------------------------------------------------------------------
+Charts
+composer require consoletvs/charts "7.*"
+php artisan vendor:publish --tag=charts (pour creer un  fichier dans app/charts)
+
+
+------------------------------------------------------------------------
+changer port
+php artisan serve --port=8080
+
+------------------------------------------------------------------------  composer require spatie/laravel-permission
+------------------------------------------------------------------------git initgit add .
+------------------------------------------------------------------------
+1 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="migrations"2 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
+php artisan make:auth
